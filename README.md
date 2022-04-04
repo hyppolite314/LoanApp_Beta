@@ -1,42 +1,57 @@
-# LoanApp_Beta
-Loan application software
+# Loan Qualifier App
 
-
-
-# LoanApp_FinTech
-The python application to automate loan application process.
-
-
-# Project Title
-
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+This app is designed to increase automation of the loan application process. This saves time for both the client (borrower) as well as the lenders in
+throughout the real estate industry. Effectively, this is a command line application to match applicants with qualifying loans.
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+Required programs, systems, and overall dependencies:
+
+Python (version 3.0 or later)
+Fire
+Pathlib
+tkinter
+sys
+questionary
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+`pip install Fire`
+`pip install Pathlib`
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+Prompting the User for file path:
+
+```python
+def save_qualifying_loans(qualifying_loans):
+    save_to_file = questionary.text("Would you like to save qualifying loans to a CSV?(yes/no)").ask()
+    save_to_file = (save_to_file)
+
+    if save_to_file == "yes":
+        csvpath = questionary.text("Enter a file path for qualifying loans (.csv):").ask()
+        csvpath = Path(csvpath)
+```
+
+![Screenshot of Terminal](https://github.com/hyppolite314/LoanApp_Beta/blob/main/terminal_scrnshot.png?raw=true)
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+Reginald Hyppolite
+https://www.linkedin.com/in/reginald-hyppolite-nyc/
+
+Shout out to all the great TAs and Professor V
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+N/A -- Free open.ware
