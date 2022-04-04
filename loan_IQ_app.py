@@ -109,18 +109,21 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
+    #This line of code (below) will ask the user if they want to save output to csv file
+    #A new variable is created to capture the response from the client
     save_to_file = questionary.text("Would you like to save qualifying loans to a CSV?(yes/no)").ask()
     save_to_file = (save_to_file)
 
+    # "if" statement is introduced in order to account for dynamic response / dialogue
     if save_to_file == "yes":
         csvpath = questionary.text("Enter a file path for qualifying loans (.csv):").ask()
         csvpath = Path(csvpath)
+
+        #if a false or unrecognized response is received
+        #the program will abort and display a message
         if not csvpath.exists():
             sys.exit(f"Oops! Can't find this path: {csvpath}")
         save_csv(csvpath, qualifying_loans)
-
-#    if not csvpath.exists():
-#        sys.exit(f"Oops! Can't find this path: {csvpath}")
 
 def run():
     """The main function for running the script."""
