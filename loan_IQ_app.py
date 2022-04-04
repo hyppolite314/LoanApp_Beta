@@ -113,9 +113,14 @@ def save_qualifying_loans(qualifying_loans):
     save_to_file = (save_to_file)
 
     if save_to_file == "yes":
-        csvpath = Path('qualifying_loans.csv')
+        csvpath = questionary.text("Enter a file path for qualifying loans (.csv):").ask()
+        csvpath = Path(csvpath)
+        if not csvpath.exists():
+            sys.exit(f"Oops! Can't find this path: {csvpath}")
         save_csv(csvpath, qualifying_loans)
 
+#    if not csvpath.exists():
+#        sys.exit(f"Oops! Can't find this path: {csvpath}")
 
 def run():
     """The main function for running the script."""

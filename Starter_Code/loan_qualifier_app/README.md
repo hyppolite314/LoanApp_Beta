@@ -1,10 +1,19 @@
-# Project Title
+# Loan Qualifier App
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+This app is designed to increase automation of the loan application process. This saves time for both the client (borrower) as well as the lenders in
+throughout the real estate industry.
 
 ---
 
 ## Technologies
+
+Required programs, systems, and overall dependencies:
+Fire
+Pathlib
+tkinter
+sys
+questionary
+
 
 Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
 
