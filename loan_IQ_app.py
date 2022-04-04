@@ -119,10 +119,6 @@ def save_qualifying_loans(qualifying_loans):
         csvpath = questionary.text("Enter a file path for qualifying loans (.csv):").ask()
         csvpath = Path(csvpath)
 
-        #if a false or unrecognized response is received
-        #the program will abort and display a message
-        if not csvpath.exists():
-            sys.exit(f"Oops! Can't find this path: {csvpath}")
         save_csv(csvpath, qualifying_loans)
 
 def run():
