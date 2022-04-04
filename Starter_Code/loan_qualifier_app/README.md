@@ -39,7 +39,7 @@ def save_qualifying_loans(qualifying_loans):
         csvpath = Path(csvpath)
 ```
 
-![Screenshot of Terminal](ENTER URL HERE)
+![Screenshot of Terminal](https://github.com/hyppolite314/LoanApp_Beta/blob/main/terminal_scrnshot.png?raw=true)
 
 ---
 
